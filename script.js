@@ -15,6 +15,8 @@ const descInput = document.querySelector("#task-desc");
 const statusSelect = document.querySelector("#task-status");
 const closeBtn = document.querySelector("#close-modal-btn");
 
+let currentTask = null; // Keeps track of which task to edit in modal
+
 /**
  * Create DOM element for a task
  * @param {Object} task - Task object contains id, title, description, ,status
@@ -33,7 +35,17 @@ function createTaskElement(task) {
   return taskDiv;
 }
 
+/**
+ * Opens the task modal for editing a specific task
+ * @param {Object} task - The task object to edit
+ */
 function openTaskModal(task) {
+  currentTask = task; // Set currentTask to the task being edited
+
+  titleInput.value = task.title;
+  descInput.value = task.description;
+  statusSelect.value = task.status;
+
   modal.showModal();
 }
 
@@ -48,7 +60,6 @@ closeBtn.addEventListener("click", () => {
  * then append task element to appropriate column container
  *
  * @function renderTasks
- * @returns {void} - No return value
  */
 function renderTasks() {
   todoContainer.innerHTML = "";
