@@ -17,24 +17,36 @@ export const initialTasks = [
     description: "You're almost there",
     status: "doing",
   },
+  {
+    id: 4,
+    title: "Conquer React ⚛️",
+    description: "You're almost there",
+    status: "todo",
+  },
+  {
+    id: 5,
+    title: "Understand Databases ⚙️",
+    description: "You're almost there",
+    status: "todo",
+  },
 
   {
-    id: 11,
-    title: "Learn Data Structures and Algorithms 📚",
+    id: 6,
+    title: "Crush Frameworks 🖼️ ",
     description:
       "Study fundamental data structures and algorithms to solve coding problems efficiently",
     status: "todo",
   },
   {
-    id: 12,
-    title: "Contribute to Open Source Projects 🌐",
+    id: 7,
+    title: "Explore ES6 Features 🚀",
     description:
       "Gain practical experience and collaborate with others in the software development community",
     status: "done",
   },
   {
-    id: 13,
-    title: "Build Portfolio Projects 🛠️",
+    id: 8,
+    title: "Have fun 🥳",
     description:
       "Create a portfolio showcasing your skills and projects to potential employers",
     status: "done",
