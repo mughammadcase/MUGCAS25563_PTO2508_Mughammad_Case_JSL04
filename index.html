@@ -79,10 +79,25 @@
     </div>
 
     <dialog id="modal-container">
-      <div class="modal-header">
-        <h3>Task</h3>
-        <button type="button" id="close-modal-btn">X</button>
-      </div>
+      <form method="dialog" id="task-form">
+        <div class="modal-header">
+          <h3>Task</h3>
+          <button type="button" id="close-modal-btn">X</button>
+        </div>
+
+        <label for="task-title">Title</label>
+        <input type="text" id="task-title" required />
+
+        <label for="task-desc">Description</label>
+        <textarea type="text" id="task-desc"></textarea>
+
+        <label for="task-status">Status</label>
+        <select id="task-status">
+          <option value="todo">todo</option>
+          <option value="doing">doing</option>
+          <option value="done">done</option>
+        </select>
+      </form>
     </dialog>
 
     <script type="module" src="./script.js"></script>
