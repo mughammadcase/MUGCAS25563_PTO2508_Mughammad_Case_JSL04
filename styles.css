@@ -383,3 +383,10 @@ dialog::backdrop {
     padding: 24px;
   }
 }
+
+/* Modal Responsiveness */
+@media (max-width: 576px) {
+  #modal-container {
+    width: 90%;
+  }
+}
