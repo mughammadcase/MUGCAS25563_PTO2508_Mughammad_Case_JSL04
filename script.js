@@ -9,8 +9,10 @@ const todoContainer = document.querySelector("#todo-container");
 const doingContainer = document.querySelector("#doing-container");
 const doneContainer = document.querySelector("#done-container");
 
-// Modal elements
 const modal = document.querySelector("#modal-container");
+const titleInput = document.querySelector("#task-title");
+const descInput = document.querySelector("#task-desc");
+const statusSelect = document.querySelector("#task-status");
 const closeBtn = document.querySelector("#close-modal-btn");
 
 /**
