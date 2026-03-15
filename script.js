@@ -12,7 +12,7 @@ const doneContainer = document.querySelector("#done-container");
 /**
  * Create DOM element for a task
  * @param {Object} task - Task object contains id, title, description, ,status
- * @return {HTMLElement} - Returns DOM element respresenting the task
+ * @return {HTMLElement} - Returns the DOM element for task
  */
 function createTaskElement(task) {
   const taskDiv = document.createElement("div");
@@ -23,8 +23,27 @@ function createTaskElement(task) {
   return taskDiv;
 }
 
-// Testing if title of first task is correctly rendered in the DOM
-const firstTaskElement = createTaskElement(tasks[0]);
-const secondTaskElement = createTaskElement(tasks[1]);
-todoContainer.appendChild(firstTaskElement);
-todoContainer.appendChild(secondTaskElement);
+/**
+ * Render tasks to respective columns based on its status
+ *
+ * Loops through tasks array and creates DOM element for each task using createTaskElement function,
+ * then append task element to appropriate column container
+ *
+ * @function renderTasks
+ * @returns {void} - No return value
+ */
+function renderTasks() {
+  tasks.forEach((task) => {
+    const taskElement = createTaskElement(task);
+
+    if (task.status === "todo") {
+      todoContainer.appendChild(taskElement);
+    } else if (task.status === "doing") {
+      doingContainer.appendChild(taskElement);
+    } else if (task.status === "done") {
+      doneContainer.appendChild(taskElement);
+    }
+  });
+}
+
+renderTasks();
