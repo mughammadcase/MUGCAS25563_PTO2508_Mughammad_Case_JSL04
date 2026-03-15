@@ -211,6 +211,30 @@ h2 {
   margin: 0;
 }
 
+/* ===============
+   Modal container styles
+================ */
+
+#modal-container {
+  width: 500px;
+  max-width: 100%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 18px;
+}
+
+#close-modal-btn {
+  color: #ea5555;
+  cursor: pointer;
+}
+
 /* ========================
    Responsive Styles
 ======================== */

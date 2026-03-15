@@ -9,6 +9,10 @@ const todoContainer = document.querySelector("#todo-container");
 const doingContainer = document.querySelector("#doing-container");
 const doneContainer = document.querySelector("#done-container");
 
+// Modal elements
+const modal = document.querySelector("#modal-container");
+const closeBtn = document.querySelector("#close-modal-btn");
+
 /**
  * Create DOM element for a task
  * @param {Object} task - Task object contains id, title, description, ,status
@@ -20,8 +24,20 @@ function createTaskElement(task) {
   taskDiv.textContent = task.title;
   taskDiv.classList.add("task-div");
 
+  taskDiv.addEventListener("click", () => {
+    openTaskModal(task);
+  });
+
   return taskDiv;
 }
+
+function openTaskModal(task) {
+  modal.showModal();
+}
+
+closeBtn.addEventListener("click", () => {
+  modal.close();
+});
 
 /**
  * Render tasks to respective columns based on its status
@@ -43,6 +59,10 @@ function renderTasks() {
     } else if (task.status === "done") {
       doneContainer.appendChild(taskElement);
     }
+  });
+
+  taskDiv.addEventListener("click", () => {
+    openTaskModal(task);
   });
 }
 
