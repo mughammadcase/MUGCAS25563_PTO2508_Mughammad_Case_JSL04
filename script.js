@@ -49,6 +49,10 @@ closeBtn.addEventListener("click", () => {
  * @returns {void} - No return value
  */
 function renderTasks() {
+  todoContainer.innerHTML = "";
+  doingContainer.innerHTML = "";
+  doneContainer.innerHTML = "";
+
   tasks.forEach((task) => {
     const taskElement = createTaskElement(task);
 
