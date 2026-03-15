@@ -54,11 +54,25 @@ closeBtn.addEventListener("click", () => {
 });
 
 /**
+ * Updates the currentTask object with new values from the modal inputs, then calls renderTasks to refresh the display
+ * @function updateTask
+ * @param {Event} event - input or change event from modal fields
+ */
+function updateTask() {
+  currentTask.title = titleInput.value;
+  currentTask.description = descInput.value;
+  currentTask.status = statusSelect.value;
+
+  renderTasks();
+}
+
+titleInput.addEventListener("input", updateTask);
+descInput.addEventListener("input", updateTask);
+statusSelect.addEventListener("change", updateTask);
+
+/**
  * Render tasks to respective columns based on its status
- *
- * Loops through tasks array and creates DOM element for each task using createTaskElement function,
- * then append task element to appropriate column container
- *
+ * Loops through tasks array and creates DOM element for each task, append task element to appropriate column container
  * @function renderTasks
  */
 function renderTasks() {
