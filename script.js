@@ -9,6 +9,10 @@ const todoContainer = document.querySelector("#todo-container");
 const doingContainer = document.querySelector("#doing-container");
 const doneContainer = document.querySelector("#done-container");
 
+const todoText = document.querySelector("#toDoText");
+const doingText = document.querySelector("#doingText");
+const doneText = document.querySelector("#doneText");
+
 const modal = document.querySelector("#modal-container");
 const titleInput = document.querySelector("#task-title");
 const descInput = document.querySelector("#task-desc");
@@ -80,17 +84,28 @@ function renderTasks() {
   doingContainer.innerHTML = "";
   doneContainer.innerHTML = "";
 
+  let todoCount = 0;
+  let doingCount = 0;
+  let doneCount = 0;
+
   tasks.forEach((task) => {
     const taskElement = createTaskElement(task);
 
     if (task.status === "todo") {
       todoContainer.appendChild(taskElement);
+      todoCount++;
     } else if (task.status === "doing") {
       doingContainer.appendChild(taskElement);
+      doingCount++;
     } else if (task.status === "done") {
       doneContainer.appendChild(taskElement);
+      doneCount++;
     }
   });
+
+  todoText.textContent = `TODO (${todoCount})`;
+  doingText.textContent = `DOING (${doingCount})`;
+  doneText.textContent = `DONE (${doneCount})`;
 }
 
 renderTasks();
