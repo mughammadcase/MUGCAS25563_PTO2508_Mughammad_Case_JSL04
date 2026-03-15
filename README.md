@@ -1,40 +1,62 @@
-# JSL04 Project Brief: Dynamic Task Display & Modal View
+# Kanban Task Management
 
-## Overview
+A responsive Kanban board for organising and tracking tasks across three workflow stages: **TODO**, **DOING**, and **DONE**.
 
-In this project, you will dynamically display tasks from the **given initial data** on the DOM using JavaScript. Tasks should be placed into the correct **Kanban board columns** based on their status, and clicking a task should open a **modal** where users can view and modify task details. The project emphasizes **DOM manipulation, event handling, modular JavaScript structure, and responsive UI implementation.**
+---
 
-## Before You Begin
+## Description
 
-**Check the project user stories in your student dashboard and the updated Figma Design** before you start building.
+Kanban Task Management is a browser-based productivity tool that lets you visualise your work in progress at a glance. Tasks are displayed as cards in their respective status columns, and can be edited in real time through a clean modal interface. The app is built with vanilla HTML, CSS, and JavaScript — no frameworks or build tools required.
 
-## Figma Design Link
+---
 
-Check the updated Figma Design: [Figma Link](https://www.figma.com/design/y7bFCUYL5ZHfPeojACBXg2/Challenges-%7C-JSL?node-id=0-1&p=f&t=Ki0CZk0RAjrk9Fhs-0)
+## Technologies Used
 
-## Key Objectives
+- **HTML5** — Semantic markup and `<dialog>` element for the modal
+- **CSS3** — Flexbox, CSS Grid and responsive media queries
+- **JavaScript (ES6+)** — Modules, array methods, DOM manipulation, and event handling
+- **Google Fonts** — [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
 
-### Dynamic Task Display & Interaction
+---
 
-- Dynamically generate **task elements** from the given initial data and insert them into the DOM.
-- Ensure tasks are placed in the **correct columns** ("To Do", "In Progress", "Done") based on their status.
-- Clicking a task should **open a modal** displaying its details.
-- The modal should include:
-  - **Editable input fields** for the task title and description.
-  - **A select dropdown** showing the current status with other status options available.
-  - **A close button** that allows users to exit the modal easily.
+## Features
 
-### Design & Responsiveness
+- **Three-column Kanban board** — Tasks are grouped into TODO, DOING, and DONE columns with live task counts
+- **Task cards** — Each task displays its title as a clickable card
+- **Edit modal** — Click any task card to open a modal and edit the title, description, and status
+- **Dynamic Task Rendering** — Tasks are dynamically rendered based on their status. When a task’s status changes, it automatically moves to the appropriate column.
 
-- Ensure the **modal matches the Figma design**, including a **backdrop effect** for focus.
-- Implement a **fully responsive modal** that works on both desktop and mobile devices.
+---
 
-### Code Structure & Maintainability
+## Setup Instructions
 
-- Structure JavaScript using **modular, single-responsibility functions**.
-- Use **descriptive and meaningful variable and function names** for clarity.
-- Add **JSDoc comments** to major functions, describing their purpose, parameters, and return values for better documentation.
+1. Clone the repository:
+   `git clone https://github.com/mughammadcase/MUGCAS25563_PTO2508_Mughammad_Case_JSL04.git`
 
-## Expected Outcome
+2. Navigate into the project folder.
 
-A fully functional **dynamic task board** where tasks appear under the correct columns, and users can **open a modal to view/edit** task details. The project will follow **clean, well-documented, and maintainable code practices**, ensuring a professional and scalable implementation.
+3. Open the project in your code editor.
+
+4. Start the project using Live Server:
+   - Right-click on the `index.html` file.
+   - Select **Open with Live Server**
+
+5. Open with Live Server
+
+---
+
+### Viewing Tasks
+
+Tasks are loaded automatically when the page opens. Each column header displays the current task count, e.g. **TODO (3)**.
+
+### Editing a Task
+
+1. Click on any task card on the board.
+2. The **Task modal** opens with the task's current title, description, and status.
+3. Edit the fields:
+   - **Title** — Type directly into the text input and the card title updates live.
+   - **Description** — Type into the textarea to update the task's description.
+   - **Status** — Use the dropdown to move the task to the **todo**, **doing**, or **done** column.
+4. Close the modal by clicking the **×** button in the top-right corner.
+
+---
