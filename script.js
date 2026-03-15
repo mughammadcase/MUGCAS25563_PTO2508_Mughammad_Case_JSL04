@@ -60,10 +60,6 @@ function renderTasks() {
       doneContainer.appendChild(taskElement);
     }
   });
-
-  taskDiv.addEventListener("click", () => {
-    openTaskModal(task);
-  });
 }
 
 renderTasks();
