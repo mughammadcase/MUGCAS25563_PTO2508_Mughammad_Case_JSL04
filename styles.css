@@ -203,23 +203,38 @@ header {
   font-weight: bold;
 }
 
-/* ===============
-   Headings
-================ */
 h2 {
   font-size: 1.5rem;
   margin: 0;
 }
 
 /* ===============
-   Modal container styles
+   Modal Styling
 ================ */
 
+/* Modal container */
 #modal-container {
   width: 500px;
   max-width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 0;
+  box-shadow: var(--primary-box-shadow);
 }
 
+/* Modal form */
+#task-form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 10px;
+}
+
+#task-form label {
+  margin-top: 8px;
+}
+
+/* Modal header */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -230,9 +245,48 @@ h2 {
   font-size: 18px;
 }
 
-#close-modal-btn {
-  color: #ea5555;
+/* Modal labels */
+#task-form label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #828fa3;
+}
+
+/* Modal inputs */
+#task-form input,
+#task-form textarea,
+#task-form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #e4ebfa;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+#task-form textarea {
+  resize: none;
+  height: 115px;
+}
+
+/* Modal interactive elements */
+#task-form select {
   cursor: pointer;
+}
+
+#close-modal-btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #ea5555;
+  line-height: 1;
+}
+
+/* Modal backdrop */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* ========================
